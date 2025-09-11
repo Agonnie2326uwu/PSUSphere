@@ -10,7 +10,7 @@ https://docs.djangoproject.com/en/5.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.2/ref/settings/
 """
-
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -26,11 +26,7 @@ SECRET_KEY = 'django-insecure-gi0=1d0h&)mwdi#!ai&l)16@5qn&@-sfm*%m$*y%d^gi8wu(uh
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-<<<<<<< HEAD
-ALLOWED_HOSTS = ['psusphere.pythonanywhere.com', '127.0.0.1'] 
-=======
-ALLOWED_HOSTS = ["carltd.pythonanywhere.com", "127.0.0.1", "localhost"]
->>>>>>> 531eddbd48daa2e38a73f588f55ea2e8d5a6b19a
+
 
 
 # Application definition
@@ -122,7 +118,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = 'static/'
-STATICFILES_DIRS = [BASE_DIR / "static",]
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATICFILES_DIRS = (
+    BASE_DIR / 'static',
+ )
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
