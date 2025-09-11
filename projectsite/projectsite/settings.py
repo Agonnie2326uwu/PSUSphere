@@ -1,3 +1,4 @@
+
 """
 Django settings for projectsite project.
 
@@ -25,7 +26,11 @@ SECRET_KEY = 'django-insecure-gi0=1d0h&)mwdi#!ai&l)16@5qn&@-sfm*%m$*y%d^gi8wu(uh
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+<<<<<<< HEAD
 ALLOWED_HOSTS = ['psusphere.pythonanywhere.com', '127.0.0.1'] 
+=======
+ALLOWED_HOSTS = ["carltd.pythonanywhere.com", "127.0.0.1", "localhost"]
+>>>>>>> 531eddbd48daa2e38a73f588f55ea2e8d5a6b19a
 
 
 # Application definition
