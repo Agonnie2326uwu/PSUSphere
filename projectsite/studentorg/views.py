@@ -9,7 +9,9 @@ from django.urls import reverse_lazy
 from django.db.models import Q
 from django.utils import timezone
 
-class HomePageView(ListView):
+from django.contrib.auth.mixins import LoginRequiredMixin
+
+class HomePageView(LoginRequiredMixin, ListView):
     model = Organization
     context_object_name = 'home'
     template_name = "home.html"
